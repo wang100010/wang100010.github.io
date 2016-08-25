@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<style>
+* {
+  padding: 0; margin: 0;
+}
+#container {
+  width: 440px; height: 400px;
+}
+a, img {
+  display: block; width: 200px; height: 200px;
+}
+
+img {
+  transition: .2s ease all;
+}
+
+img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #777;
+}
+
+a {
+  float: left; margin-right: 20px; margin-bottom: 20px;
+}
+</style>
+<body>
+  <div id="container">
+    <a href="old.html"><img src="yan/oldman.jpg" alt=""></a>
+    <a href="product.html"><img src="yan/product.jpg" alt=""></a>
+    <a href="spur.html"><img src="yan/spurs1.jpg" alt=""></a>
+    <a href="alipay.html"><img src="yan/alipay.jpg" alt=""></a>
+  </div>
+</body>
+<script>
+var container = document.getElementById('container')
+console.log(document.documentElement.clientHeight - 400 / 2)
+container.style.margin = (document.documentElement.clientHeight - 400) / 2 + 'px auto'
+
+</script>
+</html>
